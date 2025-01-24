@@ -8,5 +8,5 @@ public class Airport
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     public string Email { get; set; }
-    public string Scordova { get; set; } // Nombre personalizado
+    public string Jvalencia { get; set; } // Nombre personalizado
 }
