@@ -10,15 +10,15 @@
     </ContentPage.BindingContext>
 
     <VerticalStackLayout Padding="10">
-        <Entry x:Name="scordova_searchEntry" 
+        <Entry x:Name="Jvalencia_searchEntry" 
                Placeholder="Ingrese un país..." 
                Text="{Binding SearchText}" />
 
         <HorizontalStackLayout Spacing="10">
-            <Button x:Name="scordova_searchButton" 
+            <Button x:Name="Jvalencia_searchButton" 
                     Text="Buscar" 
                     Command="{Binding SearchCommand}" />
-            <Button x:Name="scordova_clearButton" 
+            <Button x:Name="Jvalencia_clearButton" 
                     Text="Limpiar" 
                     Command="{Binding ClearCommand}" />
         </HorizontalStackLayout>
