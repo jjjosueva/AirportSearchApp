@@ -10,16 +10,16 @@ public class AirportDatabase
     public AirportDatabase(string dbPath)
     {
         _database = new SQLiteAsyncConnection(dbPath);
-        _database.CreateTableAsync<Airport>().Wait();
+        _database.CreateTableAsync<AirportModel>().Wait();
     }
 
-    public Task<int> SaveAirportAsync(Airport airport)
+    public Task<int> SaveAirportAsync(AirportModel airport)
     {
         return _database.InsertAsync(airport);
     }
 
-    public Task<List<Airport>> GetAirportsAsync()
+    public Task<List<AirportModel>> GetAirportsAsync()
     {
-        return _database.Table<Airport>().ToListAsync();
+        return _database.Table<AirportModel>().ToListAsync();
     }
 }
