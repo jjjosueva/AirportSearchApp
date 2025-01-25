@@ -11,25 +11,33 @@
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="20">
             <Entry x:Name="Josue_Entry"
-                Text="{Binding currentNameAirport}" />
+                Text="{Binding currentNameAirport}"
+                BackgroundColor="#F5F5F5"
+                TextColor="#212121"/>
 
             <Label x:Name="Josue_Label"
                 Text="{Binding responseFromAPI}"
                 FontSize="Body"
-                Background="Black"
+                BackgroundColor="#1976D2"
                 TextColor="White" />
 
             <Button x:Name="Josue_GetAirportButton"
                 Text="Revisar en API"
-                Command="{Binding GetAirportCommand}"/>
+                Command="{Binding GetAirportCommand}"
+                BackgroundColor="#388E3C"
+                TextColor="White"/>
 
             <Button x:Name="Josue_ClearScreenButton"
                 Text="Limpiar"
-                Command="{Binding ClearScreenCommand}" />
+                Command="{Binding ClearScreenCommand}"
+                BackgroundColor="#D32F2F"
+                TextColor="White"/>
 
             <Button x:Name="Josue_SaveAirportButton"
                 Text="Guardar en SQLite"
-                Command="{Binding SaveAirportInSQLiteCommand}" />
+                Command="{Binding SaveAirportInSQLiteCommand}"
+                BackgroundColor="#FF9800"
+                TextColor="White"/>
 
         </VerticalStackLayout>
     </ScrollView>

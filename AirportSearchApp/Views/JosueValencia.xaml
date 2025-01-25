@@ -9,42 +9,55 @@
         <local:InfoDBViewModel/>
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Spacing="20" Padding="20">
+    <VerticalStackLayout Spacing="20" Padding="20" BackgroundColor="#F3F4F6">
 
         <Button x:Name="Josue_GetAllAirportsButton"
                 Text="Ver todos los Aeropuertos"
-                Command="{Binding GetAirportListCommand}" />
+                Command="{Binding GetAirportListCommand}"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="5"
+                Padding="10"
+                HorizontalOptions="Center"/>
 
         <ListView x:Name="Josue_AirportListView"
-          ItemsSource="{Binding airports}"
-          HasUnevenRows="True"
-          CachingStrategy="RecycleElement"
-          Margin="10">
+                  ItemsSource="{Binding airports}"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
+                  Margin="10"
+                  BackgroundColor="#FFFFFF">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Padding="10" Margin="5" BorderColor="Gray" CornerRadius="10">
-                            <StackLayout Orientation="Vertical">
-                                <Label x:Name="Josue_Label1" Text="{Binding name, StringFormat='Nombre: {0}'}" 
-                                FontSize="18" 
-                                FontAttributes="Bold"
-                                TextColor="Black"/>
-                                <Label x:Name="Josue_Label2" Text="{Binding country, StringFormat='País: {0}'}" 
-                            FontSize="16" 
-                            TextColor="DarkBlue"/>
-                                <Label x:Name="Josue_Label3" Text="{Binding latitude, StringFormat='Latitud: {0}'}" 
-                            FontSize="14" 
-                            TextColor="Black"/>
-                                <Label x:Name="Josue_Label4" Text="{Binding longitude, StringFormat='Longitud: {0}'}" 
-                            FontSize="14" 
-                            TextColor="Black"/>
-                                <Label x:Name="Josue_Label5" Text="{Binding email, StringFormat='Correo: {0}'}" 
-                            FontSize="14" 
-                            TextColor="Black"/>
-                                <Label x:Name="Josue_Label6" Text="{Binding personName, StringFormat='JosueValencia: {0}'}" 
-                            FontSize="14" 
-                            TextColor="Black"/>
+                        <Frame Padding="15" Margin="10" BorderColor="#DDDDDD" CornerRadius="12" BackgroundColor="#FAFAFA">
+                            <StackLayout Orientation="Vertical" Spacing="10">
+                                <Label x:Name="Josue_Label1" 
+                                       Text="{Binding name, StringFormat='Nombre: {0}'}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="#333333"/>
+                                <Label x:Name="Josue_Label2" 
+                                       Text="{Binding country, StringFormat='País: {0}'}" 
+                                       FontSize="16" 
+                                       TextColor="#1E88E5"/>
+                                <Label x:Name="Josue_Label3" 
+                                       Text="{Binding latitude, StringFormat='Latitud: {0}'}" 
+                                       FontSize="14" 
+                                       TextColor="#666666"/>
+                                <Label x:Name="Josue_Label4" 
+                                       Text="{Binding longitude, StringFormat='Longitud: {0}'}" 
+                                       FontSize="14" 
+                                       TextColor="#666666"/>
+                                <Label x:Name="Josue_Label5" 
+                                       Text="{Binding email, StringFormat='Correo: {0}'}" 
+                                       FontSize="14" 
+                                       TextColor="#666666"/>
+                                <Label x:Name="Josue_Label6" 
+                                       Text="{Binding personName, StringFormat='JosueValencia: {0}'}" 
+                                       FontSize="14" 
+                                       TextColor="#666666"/>
                             </StackLayout>
                         </Frame>
                     </ViewCell>
